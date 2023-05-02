@@ -6,7 +6,7 @@ This Python script extracts all unique URLs from a given webpage and outputs the
 
 ## Installation
 1- Install with git:
-`` git clone https://github.com/ ``
+`` git clone https://github.com/secnextechnologies/WebSieve.git ``
 
 2- Install the required modules: requests, beautifulsoup4, and argparse
 * Run `` pip install requests beautifulsoup4 argparse `` to install them
