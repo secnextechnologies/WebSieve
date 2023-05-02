@@ -1,5 +1,8 @@
 # WebSieve
 
+## Description
+"Websieve" is the name of the Python script that extracts unique URLs from a given webpage. It is a combination of the words "web" (referring to the internet) and "sieve" (a tool used to filter out unwanted particles from a mixture). The name suggests that the script is used to filter out All URLs from a webpage and extract only the ones that are unique and relevant.
+
 ## Extract Unique URLs from a Webpage
 
 This Python script extracts all unique URLs from a given webpage and outputs them to the console or to a file. It uses the requests module to send a GET request to the specified URL and the BeautifulSoup module to parse the HTML content of the response.
@@ -43,3 +46,4 @@ You can also specify cookies to use in the request using the -c or --cookies opt
 #### Pull requests and feature requests are welcomed
 
 ## License
+WebSieve is released under MIT license. See [LICENSE](https://github.com/secnextechnologies/WebSieve/blob/main/LICENSE).
