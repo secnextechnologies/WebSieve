@@ -25,6 +25,11 @@ parser.add_argument("-o", "--output", help="File to save the output to (optional
 # Parse command line arguments
 args = parser.parse_args()
 
+# Check if URL is provided
+if not args.url:
+    parser.print_help()
+    exit()
+
 # Convert cookies string to a dictionary
 cookies_dict = {}
 if args.cookies:
@@ -36,16 +41,18 @@ if args.cookies:
 cookies = cookiejar_from_dict(cookies_dict)
 
 # Send request and extract URLs
-response = requests.get(args.url, cookies=cookies)
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3"
+}
+response = requests.get(args.url, headers=headers, cookies=cookies)
 soup = BeautifulSoup(response.content, "html.parser")
-urls = set() # use a set to store unique URLs
+urls = set()  # use a set to store unique URLs
 
 for link in soup.find_all('a'):
     href = link.get('href')
     if href and href.startswith("http"):
         urls.add(href)
 
-#url_list = "\n".join([f"{index+1}. {url}" for index, url in enumerate(urls)])
 url_list = "\n".join([url for url in urls])
 print(url_list)
 
