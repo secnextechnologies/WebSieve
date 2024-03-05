@@ -11,7 +11,7 @@ print("""
  \        /\  ___/| \_\ \/        \|  \  ___/\   /\  ___/ 
   \__/\  /  \___  >___  /_______  /|__|\___  >\_/  \___  >
        \/       \/    \/        \/         \/          \/ 
-       				- SecneX Technologies (secnex.tech)
+       				- SecneX Technologies
        				
 [INF] Current WebSieve version v1.2
 """)
